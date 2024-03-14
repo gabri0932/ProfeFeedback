@@ -1,0 +1,166 @@
+body{
+    margin: 0;
+    padding: 0;
+      background-color: rgb(11,20,22);
+}
+.padre{
+    height: 100px;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    top: -10px;
+    background-color: rgb(11,20,22);
+}
+.padre .home .redes a i{
+    color: white;
+}
+.menu nav ul li i{
+    color: white;
+}
+.menu nav ul li .cositas li i{
+    color: black;
+}
+#menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu{
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: relative;
+    left: 93.5%;
+    top: 10px;
+}
+.menu i{
+    margin-top: 2px;
+    margin-left: 3px;
+}
+#menu ul{
+    display: none;
+    position: absolute;
+}
+#menu li:hover ul {
+    display: block;
+}
+#menu li{
+    position: relative;
+    list-style: none;
+    right: 20px;
+    top: 5px;
+}
+#menu li ul{
+    width: 60px;
+    top: 85%;
+    left: 0px;
+    transition: all 0.3 ease;
+    opacity: 0;
+    pointer-events: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+    background-color: white;
+}
+#menu li:hover ul{
+    opacity: 1;
+    pointer-events: auto;
+}
+.cositas li{
+    margin: 0;
+    position: relative;
+    right: 30px;
+}
+i{
+    font-size: 20px;
+    color: black;
+}
+li a{
+    position: relative;
+    right: 20px;
+}
+.p_menu{
+    margin-left: 2px;
+    font-size: 12px;
+    position: relative;
+    top: -20px;
+    left: 5px;
+    width: 100%;
+    cursor: pointer;
+    display: inline-block;
+}
+.p_menu1{
+    margin-left: 2px;
+    font-size: 12px;
+    position: relative;
+    left: -20px;
+    top: px;
+    cursor: pointer;
+    display: inline-block;
+}
+.home{
+    width: 30%;
+    height: 20%;
+    position: relative;
+    left: 10px;
+    bottom: 35px;
+}
+.redes{
+    width: 100px;
+    height: 40px;
+    position: relative;
+    display: block;
+    top: 75px;
+    left: 290px;
+}
+.title{
+    width: 90%;
+}
+.title h1{
+    color: #fff;
+    font-family: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serifs;
+}
+.padre .linea{
+    width: 95%;
+    left: 2.5%;
+    
+    bottom: 20px;
+    position: absolute;
+    border-bottom: 1px solid grey;
+}
+.search{
+    width: 40%;
+    height: 30px;
+    position: absolute;
+    left: 500px;
+    top: 30px;
+}
+.search form{
+    height: 40px;
+}
+.search label{
+    width: 200px;
+    height: 30px;
+}
+.search label i{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom:15px ;
+    border-radius: 20px;
+    padding: 0 10px;
+    background-color: rgb(26,40,45);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+.search input{
+    width: 80%;
+    display: inline-block;
+    position: relative;
+    top: -38px;
+    left: 30px;
+    border: none;
+    background-color: rgb(26,40,45);
+    color: rgb(130,149,155);
+
+}

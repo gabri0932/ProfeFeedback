@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(11,20,22);
+    color: White;
+    font-family: Verdana, Geneva, Tahoma, sans-serifs;
+    
+}
+header h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.agradecimientos{
+    width: 100%;
+    height: auto;
+}
+.agradecimientos h2{
+    position: relative;
+    left: 10px;
+    width: 40%;
+}
+.agradecimientos .p1{
+    padding-left: 20px;
+}
+.agradecimientos .p2{
+    padding-left: 40px;
+}
+.agradecimientos .nombres li{
+    position: relative;
+    left: -10px;
+    list-style: none;
+}
+.agradecimientos .nombre li .p_agradecimiento{
+    display: block;
+    position: relative;
+    left: 5px;
+    width: 900px;
+}
+.agradecimientos .adios{
+    width: 90%;
+    position: relative;
+    left: 5px;
+    top: 20px;
+}
