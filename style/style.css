@@ -1,15 +1,13 @@
 body{
     margin: 0;
     padding: 0;
-      background-color: rgb(11,20,22);
+    background-color: rgb(11,20,22);
 }
 .padre{
-    height: 100px;
-    width: 100%;
-    display: inline-block;
-    position: relative;
-    top: -10px;
-    background-color: rgb(11,20,22);
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+
 }
 .padre .home .redes a i{
     color: white;
@@ -30,8 +28,8 @@ body{
     height: 40px;
     display: block;
     position: relative;
-    left: 93.5%;
-    top: 10px;
+    left: 830px ;
+    top: 30px;
 }
 .menu i{
     margin-top: 2px;
@@ -164,22 +162,40 @@ li a{
     color: rgb(130,149,155);
 
 }
-/* Menu lateral */
+.linea1{
+    position: relative;
+    width: 95%;
+    border-bottom: 1px solid grey;
+    left: 2.5%;
+    top: 10px;
+}
+/* codigo del menu lateral */
+.menu_lateral{
+    position: relative;
+    top: 30px;
+    display: flex;
+    width: 20vw;
+    height: 80vh;
+    flex-direction: column;
+    font-family: 20px;
+    border-right: 1px solid grey;
+    color: white;
+}
+.menu_lateral .home{
+    position: relative;
+    top: 10px;
+    left: 25%;
+    padding-left: 1px;
+}
 .menu_lateral a i{
     color: white;
+
 }
 .menu_lateral .white{
     color: white;
 }
 .menu_lateral #white{
     color: white;
-}
-.menu_lateral{
-    color: white;
-    width: 22%;
-    height: 490px;
-    font-family: 20px;
-    border-right: 1px solid grey;
 }
 .menu_lateral li{
     font-size: 20px;
@@ -199,75 +215,92 @@ li a{
     font-size: 20px;
 }
 .menu_lateral .home{
-    position: relative;
-    top: 0px;
-    left: 90px;
+    display: flex;
     text-decoration: none;
 }
 .menu_lateral .menu1{
     width: 100%;
     height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    top: -70px;
 }
 .menu_lateral .menu1 ul li{
     list-style: none;
     margin-top: 20px;
 }
-.menu_lateral .linea1{
-    width: 95%;
-    top: 20px;
-    position: relative;
-    left: 2.5%;
-    border-bottom: 1px solid grey;
-}
+
 .menu_lateral .importante{
-    position: relative;
-    top: 20px;
-    left: 0px;
     text-decoration: none;
 }
 .menu_lateral .menu2{
+    position: relative;
+    top: 50px;
     width: 100%;
     height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 .menu_lateral .menu2 li{
     list-style: none;
     margin-top:20px ;
 }
-.menu_lateral .linea2{
-    width: 95%;
-    position: relative;
-    top: 90px;
-    left: 2.5%;
-    border-bottom: 1px solid grey;
-    margin-bottom: 60px;
-}
+
 .menu_lateral .contribuidores{
     width: 100%;
     height: 30px;
     position: relative;
-    margin-bottom: 10px;
-    top: 80px;
-    left: 60px;
+    top: 130px;
+    left: 20%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
 }
 .footer{
-    width: 100%;
+    width: 20%;
     height: 10px;
+    display: flex;
     position: relative;
-    top: 120px;
-    left: 20px;
+    align-self: flex-end;
+    top: 35px;
+    left: 10px;
+    color: white;
 }
 .footer footer{
     font-size: 10px;
 }
+.linea4{
+    top: 8px;
+    display: flex;
+    width: 95%;
+    position: relative;
+    border-bottom: 1px solid grey;
+    left: 2.5%;
+}
+.linea2{
+    display: flex;
+    width: 95%;
+    position: relative;
+    border-bottom: 1px solid grey;
+    left: 2.5%;
+    top: 110px;
+}
 /*Informaciones laterales */
-
+.mover{
+    display: flex;
+    position: absolute;
+    left: 300px;
+    top: 100px;
+}
 .info{
     width: 700px;
     height: 150px;
-    display: block;
-    position: absolute;
-    left: 320px;
-    bottom: 350px;
+    display:inline-flexbox;
+    justify-content: flex-end;
+    align-items: center;
     background-color: rgb(35, 68, 75);
     border-radius: 10px;
     color: white;
@@ -309,7 +342,7 @@ li a{
 .comentarios{
     width: 800px;
     height: auto;
-    display: inline-block;
+    display: inline-flex;
     position: absolute;
     left: 320px;
     top: 300px;
@@ -319,16 +352,16 @@ li a{
     position: relative;
     border-radius: 10px;
     left: 10px;
-    height: 240px;
-    display: block;
+    height: 280px;
+    display: flexbox;
     background-color: rgb(4,9,10);
     border: #fff 1px solid;
 }
 .comentarios .destacados{
     width: 240px;
     border-radius: 10px;
-    height: 240px;
-    display: block;
+    height: 280px;
+    display: flexbox;
     background-color: rgb(4,9,10);
     position: absolute;
     left: 420px;
@@ -338,7 +371,7 @@ li a{
 .popular{
     width: 240px;
     border-radius: 10px;
-    height: 380px;
+    height: 420px;
     display: block;
     background-color: rgb(4,9,10);
     position: absolute;

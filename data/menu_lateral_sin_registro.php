@@ -10,7 +10,7 @@
                 </li>
             </ul>
         </nav>
-        <div class="linea1"></div>
+        <div class="linea4"></div>
         <div class="importante">
             <nav class="menu2">
                 <ul>
@@ -28,8 +28,8 @@
         <div class="contribuidores">
             <a href=""><i class='bx bxs-star-half'></i> <i class="p_1">Contribuidores</i></a>
         </div>
-        <div class="linea"></div>
+    </div>
+    <div class="linea"></div>
         <div class="footer">
             <footer>Profe Feedback, RD.© 2024. Todos los derechos reservados</footer>
         </div>
-    </div>

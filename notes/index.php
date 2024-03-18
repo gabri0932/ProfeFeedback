@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/foro.css">
     <link rel="icon" href="icons/icon.jpg">
     <title>Home</title>
 </head>
@@ -40,13 +40,13 @@
             </ul>
         </nav>
         </div>
+        <div class="linea"></div>
     </div>
-    <div class="linea1"></div>
+
     <?php
         /*  Menu lateral del foro */
             include("data/menu_lateral_sin_registro.php")
     ?>
-    <div class="mover">
     <div class="info">
         <di class="h2">
             <h2>Saber de tus profesores nunca habia sido tan fácil</h2>
@@ -61,7 +61,6 @@
             <button for="search" id="search"><a href="login_register.php">✔ Evalua maestros</a></button>
         </div>
     </div>
-    </div>
     <div class="comentarios">
             <div class="recientes">
                 <h3>Comentarios recientes</h3>
@@ -74,5 +73,5 @@
     <div class="popular">
         <h3>Comentarios populares</h3>
     </div>
-    </body>
+</body>
 </html>
