@@ -1,7 +1,7 @@
 <?php
     session_start();
     include("resource/controller.php");
-    validacion();
+    set();
 ?>
 <!DOCTYPE html>
 <html lang="en">

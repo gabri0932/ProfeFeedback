@@ -1,7 +1,7 @@
 <?php
     session_start();
     include("../resource/controller.php");
-    validacion();
+    noset();
 ?>
 
 <!DOCTYPE html>
