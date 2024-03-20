@@ -30,9 +30,9 @@
                     'user_id' => $user_data['user_id'],
                     'name' => $user_data['name'],
                     'email' => $user_data['email']
-                ]
+                ];
 
-                header("Location: https://profefeedback.com/app/foro.php");
+                header("Location: app/foro.php");
                 exit;
             } else {
                 $_SESSION["error"] = "<span class='error' style=' position:absolute; top:0; right:0;color:red ;'> Correo o contraseña incorrecto</span>";
