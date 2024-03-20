@@ -8,7 +8,7 @@
 
     function set() {
         if(isset($_SESSION["USER_VAL"])){
-            header('Location: https://profefeedback.com/app/foro.php');
+            header('Location: app/foro.php');
             return;
         }
     }
