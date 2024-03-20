@@ -1,3 +1,8 @@
+<?php
+    session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +11,11 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="../../icons/icon.jpg">
     <link rel="stylesheet" href="../appcss/form_escuelas.css">
-    <title>Document</title>
+    <title>Adventista</title>
 </head>
 <body>
     <?php 
-        include("../../data/header.php");
+        include("../../data/header_escuelas.php");
         include("../../data/menu_escuelas.php");     
     ?>
     <h1 class="bienvenida">Bienvenido [Name] al Colegio Adventista</h1>

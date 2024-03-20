@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include("resource/controller.php");
+    validacion();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
