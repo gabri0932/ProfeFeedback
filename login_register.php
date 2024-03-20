@@ -49,6 +49,12 @@
                     <i class='bx bxl-linkedin-square' ></i>
                 </div>
                 <p>Usa tu Email para registrarte</p>
+                <?php 
+                        if(isset($_SESSION["error"])){
+                            echo $_SESSION["error"];
+                            unset($_SESSION["error"]);
+                        }
+                    ?>
                 <form action="" class="form">
                     <label for="">
                         <i class='bx bx-user' ></i>
