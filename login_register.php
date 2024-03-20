@@ -2,6 +2,24 @@
     session_start();
     include("resource/controller.php");
     set();
+
+    if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["password"])) {
+        if (empty($_POST["name"]) || empty($_POST["email"]) || empty($_POST["password"])) {
+            $_SESSION["error"] = "<span class='error' style=' position:absolute; top:0; right:0;color:red ;'>Todos los campos son necesarios.</span>";
+            header("Location: login.php");
+            exit;
+        } elseif (is_numeric($_POST["name"])) {
+            $_SESSION["error"] = "<span class='error' style=' position:absolute; top:0; right:0;color:red ;'>Ingrese un nombre válido.</span>";
+            header("Location: login.php");
+            exit;
+        } elseif (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+            $_SESSION["error"] = "<span class='error' style=' position:absolute; top:0; right:0;color:red ;'>Ingrese un correo válido.</span>";
+            header("Location: login.php");
+            exit;
+        } else {
+            
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,15 +52,15 @@
                 <form action="" class="form">
                     <label for="">
                         <i class='bx bx-user' ></i>
-                        <input type="text" placeholder="Nombre completo">
+                        <input type="text" name="name" placeholder="Nombre completo">
                     </label>
                     <label for="">
                         <i class='bx bx-envelope' ></i>
-                        <input type="email" name="" id="" placeholder="Correo Electr&oacute;nico">
+                        <input type="email" name="email" id="" placeholder="Correo Electr&oacute;nico">
                     </label>
                     <label for="">
                         <i class='bx bx-lock-alt' ></i>
-                        <input type="password" name="" id="" placeholder="Contraseña">
+                        <input type="password" name="password" id="" placeholder="Contraseña">
                     </label>
                     <input type="submit" value="Reg&iacute;strate">
                 </form>
