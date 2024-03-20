@@ -6,7 +6,7 @@
             $_SESSION["error"] = "<span class='error' style=' position:absolute; top:0; right:0;color:red ;'> Todos los campos son necesarios</span>";
             header("Location: login.php");
             exit;
-        }elseif (!filter_var($_POST["email"]),FILTER_VALIDATE_EMAIL) {
+        }elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
             $_SESSION["error"] = "<span class='error' style=' position:absolute; top:0; right:0;color:red ;'> Email Invalido</span>";
             header("Location: login.php");
             exit;
