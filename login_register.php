@@ -55,7 +55,7 @@
                             unset($_SESSION["error"]);
                         }
                     ?>
-                <form action="" class="form">
+                <form action="" class="form" method="POST">
                     <label for="">
                         <i class='bx bx-user' ></i>
                         <input type="text" name="name" placeholder="Nombre completo">
