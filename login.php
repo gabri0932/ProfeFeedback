@@ -76,7 +76,6 @@
                             echo $_SESSION["error"];
                             unset($_SESSION["error"]);
                         }
-                        
                     ?>
                     <label for="">
                         <i class='bx bx-envelope' ></i>
