@@ -1,5 +1,46 @@
 <?php
+    include("resource/pdo.php");
     session_start();
+    if(isset($_POST["email"]) && isset($_POST["password"]) ){
+        if(empty($_POST["email"]) || empty($_POST["password"])){
+            $_SESSION["error"] = "<span class='error' style=' position:absolute; top:0; right:0;color:red ;'> Todos los campos son necesarios</span>";
+            header("Location: login.php");
+            exit;
+        }elseif (!filter_var($_POST["email"]),FILTER_VALIDATE_EMAIL) {
+            $_SESSION["error"] = "<span class='error' style=' position:absolute; top:0; right:0;color:red ;'> Email Invalido</span>";
+            header("Location: login.php");
+            exit;
+        } else {
+            $query = $pdo -> prepare("SELECT COUNT(*) conteo  FROM users WHERE email = :em AND password = :pw;");
+            $query -> execute(array(
+                ':em' => htmlentities($_POST["email"]),
+                ':pw' => htmlentities($_POST["password"])
+            ));
+            $conteo = $query -> fetch(PDO::FETCH_ASSOC);
+
+            if ($conteo["conteo"] == 1) {
+                $query = $pdo -> prepare("SELECT * FROM users WHERE email = :em AND password = :pw;");
+                $query -> execute(array(
+                    ':em' => htmlentities($_POST["email"]),
+                    ':pw' => htmlentities($_POST["password"])
+                ));
+                $user_data = $query -> fetch(PDO::FETCH_ASSOC);
+
+                $_SESSION["USER_VAL"] = [
+                    'user_id' => $user_data['user_id'],
+                    'name' => $user_data['name'],
+                    'email' => $user_data['email']
+                ]
+
+                header("Location: https://profefeedback.com/app/foro.php");
+                exit;
+            } else {
+                $_SESSION["error"] = "<span class='error' style=' position:absolute; top:0; right:0;color:red ;'> Correo o contraseña incorrecto</span>";
+                header("Location: login.php");
+                exit;
+            }
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,14 +70,21 @@
                     <i class='bx bxl-linkedin-square' ></i>
                 </div>
                 <p>o Inicia Sesi&oacute;n con una cuenta</p>
-                <form action="" class="form">
+                <form action="" class="form" method="POST">
+                    <?php 
+                        if(isset($_SESSION["error"])){
+                            echo $_SESSION["error"];
+                            unset($_SESSION["error"]);
+                        }
+                        
+                    ?>
                     <label for="">
                         <i class='bx bx-envelope' ></i>
-                        <input type="email" name="" id="" placeholder="Correo Electr&oacute;nico">
+                        <input type="email" name="email" id="" placeholder="Correo Electr&oacute;nico">
                     </label>
                     <label for="">
                         <i class='bx bx-lock-alt' ></i>
-                        <input type="password" name="" id="" placeholder="Contraseña">
+                        <input type="password" name="password" id="" placeholder="Contraseña">
                     </label>
                     <input type="submit" value="Inciar Sesi&oacute;n">
                 </form>

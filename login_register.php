@@ -1,5 +1,7 @@
 <?php
     session_start();
+    include("resource/controller.php");
+    set();
 ?>
 <!DOCTYPE html>
 <html lang="en">
