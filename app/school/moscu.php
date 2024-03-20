@@ -1,5 +1,7 @@
 <?php
     session_start();
+    include("../../resource/controller.php");
+    noset();
 ?>
 
 <!DOCTYPE html>
