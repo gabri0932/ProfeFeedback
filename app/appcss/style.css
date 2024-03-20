@@ -288,113 +288,58 @@ li a{
     left: 2.5%;
     top: 110px;
 }
-/*Informaciones laterales */
-.mover{
+.informacion{
     display: flex;
     position: absolute;
-    left: 300px;
-    top: 100px;
+    left: 400px;
+    bottom: 350px;
+    width: 800px;
+    height: auto;
 }
-.info{
-    width: 700px;
+.bienvenido{
+    display: flex;
+    width: 500px;
+    color: white;
     height: 150px;
-    display:inline-flexbox;
-    justify-content: flex-end;
-    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serifs;
+}
+.informacion .bienvenido p{
+    width: 450px;
+    height: 140px;
+    display: flexbox;
+    position: relative;
+    top: 10px;
+    left: 15px;
+}
+.bienvenido{
     background-color: rgb(35, 68, 75);
     border-radius: 10px;
     color: white;
 }
-.info .h2 h2{
-    display: block;
-    position: relative;
-    top: 2px;
-    left: 15px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.lista{
+    width: 300px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    list-style: none;
+    top: 180px;
 }
-.info .p p{
-    width: 500px;
-    position: relative;
-    left: 30px;
-    font-family:Arial, Helvetica, sans-serif;
-}
-.info .boton {
-    width: 200px;
-    height: 150px;
-    display: block;
-    position: relative;
-    left: 530px;
-    bottom: 80px;
-}
-.info .boton a{
+.lista a{
     color: white;
-    text-decoration:none ;
+    font-family: Verdana, Geneva, Tahoma, sans-serifs;
 }
-.info .boton button{
-    width: 130px;
-    height: 35px;
-    color: white;
-    font-family:Arial, Helvetica, sans-serif;
-    background-color: #2b6899;
-    border: none;
-    border-radius: 10px;
-}
-.comentarios{
-    width: 800px;
-    height: auto;
-    display: inline-flex;
+.logo{
+    display: flex;
     position: absolute;
-    left: 320px;
-    top: 300px;
+    width: 300px;
+    border-radius: 100px;
+    top: 20px;
+    left:520px;
+    height: 300px;
 }
-.comentarios .recientes{
-    width: 400px;
+.linea5{
+    border-bottom: 1px solid grey;
+    width: 70%;
+    left: 25%;
     position: relative;
-    border-radius: 10px;
-    left: 10px;
-    height: 280px;
-    display: flexbox;
-    background-color: rgb(4,9,10);
-    border: #fff 1px solid;
-}
-.comentarios .destacados{
-    width: 240px;
-    border-radius: 10px;
-    height: 280px;
-    display: flexbox;
-    background-color: rgb(4,9,10);
-    position: absolute;
-    left: 420px;
-    top: 0px;
-    border: #fff 1px solid;
-}
-
-.popular{
-    width: 240px;
-    border-radius: 10px;
-    height: 420px;
-    display: block;
-    background-color: rgb(4,9,10);
-    position: absolute;
-    left: 1030px;
-    top: 160px;
-    border: #fff 1px solid;
-}
-.comentarios .recientes h3{
-    position: absolute;
-    top: -50px;
-    left: 100px;
-    color: #fff;
-}
-.comentarios .destacados h3{
-    position: absolute;
-    top: -50px;
-    left: 20px;
-    color: #fff;
-}
- .popular h3{
-    position: relative;
-    top: -50px;
-    left: 20px;
-    color: #fff;
 }

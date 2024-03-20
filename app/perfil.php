@@ -46,9 +46,9 @@
         <div class="men_lateral">
             <nav>
             <ul>
-                <li><a href="foros.php"><i class='bx bx-home'></i> Inicio</a></li>
-                <li><a href=""><i class='bx bxs-right-top-arrow-circle'></i> Popular</a></li>
-                <li><a href=""><i class='bx bx-bar-chart'></i></i>  Todo</a></li>
+                <li><a href="foro.php"><i class='bx bx-home'></i> Inicio</a></li>
+                <li><a href="foro.php"><i class='bx bxs-right-top-arrow-circle'></i> Popular</a></li>
+                <li><a href="foro.php"><i class='bx bx-bar-chart'></i></i>  Todo</a></li>
             </ul>
             </nav>
         </div> 
@@ -66,11 +66,5 @@
                 </form>
             </div>
         </div>
-        <div class="lateral_perfil">
-                <h3>Gabriel Garces Geronimo</h3>
-                <div class="cuadrito">
-                    
-                </div>
-            </div>
 </body>
 </html>

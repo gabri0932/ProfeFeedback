@@ -288,113 +288,109 @@ li a{
     left: 2.5%;
     top: 110px;
 }
-/*Informaciones laterales */
-.mover{
+.bienvenida{
+    color: white;
     display: flex;
-    position: absolute;
-    left: 300px;
-    top: 100px;
-}
-.info{
-    width: 700px;
-    height: 150px;
-    display:inline-flexbox;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    background-color: rgb(35, 68, 75);
+    position: absolute;
+    width: 800px;
+    left: 400px;
+    bottom: 75%;
+}
+.form_comen{
+    color: white;
+    width: 70vw;
+    left: 24%;
+    bottom: 7%;
+    height: 65vh;
+    position: absolute;
     border-radius: 10px;
-    color: white;
 }
-.info .h2 h2{
-    display: block;
+.form_comen .form{
+    background-color: rgb(11, 25, 27);
+    width: 30%;
+    height: 90%;
+    left: 5px;
     position: relative;
-    top: 2px;
-    left: 15px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
 }
-.info .p p{
-    width: 500px;
+.form_comen .form h2{
     position: relative;
-    left: 30px;
-    font-family:Arial, Helvetica, sans-serif;
+    top: 3px;
+    display: flex;
+    justify-content: center;
 }
-.info .boton {
-    width: 200px;
-    height: 150px;
-    display: block;
+.select{
+    width: 100px;
     position: relative;
-    left: 530px;
-    bottom: 80px;
+    left: 32%;
+    margin-bottom: 5px;
+    background-color: transparent;
+    border-radius: 10px;
 }
-.info .boton a{
-    color: white;
-    text-decoration:none ;
+textarea{
+    resize: none;
+    position: relative;
+    margin-top: 2px;
+    left: 8%;
+    height: 230px;
+    border-radius: 10px;
+    background-color: transparent;
 }
-.info .boton button{
-    width: 130px;
-    height: 35px;
-    color: white;
+button{
+    position: relative;
+    left: 35%;
+    margin-top: 10px;
     font-family:Arial, Helvetica, sans-serif;
     background-color: #2b6899;
     border: none;
     border-radius: 10px;
 }
-.comentarios{
-    width: 800px;
-    height: auto;
-    display: inline-flex;
-    position: absolute;
+.form_comen .recientes{
+    background-color: rgb(4,9,10);
+    width: 28%;
+    height: 90%;
+    position: relative;
+    bottom: 90%;
     left: 320px;
-    top: 300px;
+    border-radius: 10px;
+    border: #fff solid 1px;
 }
-.comentarios .recientes{
-    width: 400px;
+.form_comen .populares{
+    background-color: rgb(4,9,10);
+    width: 24%;
+    height: 40%;
+    display: flex;
     position: relative;
-    border-radius: 10px;
-    left: 10px;
-    height: 280px;
-    display: flexbox;
+    bottom: 181%;
+    left: 640px;
+    border-radius: 40px;
+    border: #fff solid 1px;
+}
+.form_comen .antiguos{
     background-color: rgb(4,9,10);
-    border: #fff 1px solid;
-}
-.comentarios .destacados{
-    width: 240px;
-    border-radius: 10px;
-    height: 280px;
-    display: flexbox;
-    background-color: rgb(4,9,10);
-    position: absolute;
-    left: 420px;
-    top: 0px;
-    border: #fff 1px solid;
-}
-
-.popular{
-    width: 240px;
-    border-radius: 10px;
-    height: 420px;
-    display: block;
-    background-color: rgb(4,9,10);
-    position: absolute;
-    left: 1030px;
-    top: 160px;
-    border: #fff 1px solid;
-}
-.comentarios .recientes h3{
-    position: absolute;
-    top: -50px;
-    left: 100px;
-    color: #fff;
-}
-.comentarios .destacados h3{
-    position: absolute;
-    top: -50px;
-    left: 20px;
-    color: #fff;
-}
- .popular h3{
+    width: 28%;
+    height: 50%;
+    display: flex;
     position: relative;
-    top: -50px;
-    left: 20px;
-    color: #fff;
+    bottom: 180%;
+    left: 620px;
+    border-radius: 20px;
+    border: #fff solid 1px;
+}
+.recientes h2{
+    position: relative;
+    left: 32px;
+}
+.populares h2{
+    position: relative;
+    left: 15px;
+}
+.antiguos h2{
+    position: relative;
+    left: 35px;
+}
+div h2{
+    font-size: 20px;
 }

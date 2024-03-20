@@ -44,7 +44,7 @@
     <div class="linea1"></div>
     <?php
         /*  Menu lateral del foro */
-            include("data/menu_lateral_sin_registro.php")
+            include("data/menu_lateral_sin_registro.php");
     ?>
     <div class="mover">
     <div class="info">

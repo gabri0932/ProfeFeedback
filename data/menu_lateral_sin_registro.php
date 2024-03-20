@@ -16,9 +16,9 @@
                 <ul>
                     <li><i class="white">¿Quieres saber mas?</i>
                         <ul>
-                            <li><a href="data/noregistro.php"><i class='bx bxs-error-alt'></i> <i class="p_1">Politicas de privacidad</i></a></li>
+                            <li><a href="app/p_privacidad.html"><i class='bx bxs-error-alt'></i> <i class="p_1">Politicas de privacidad</i></a></li>
                             <li><a href="data/noregistro.php"><i class='bx bxl-mailchimp'></i> <i class="p_1">Nosotros</i></a></li>
-                            <li><a href="data/noregistro.php"><i class='bx bx-book-open'></i> <i class="p_1">Reglas</i></a></li>
+                            <li><a href="app/normas.html"><i class='bx bx-book-open'></i> <i class="p_1">Reglas</i></a></li>
                         </ul>
                     </li>
                 </ul>
@@ -26,7 +26,7 @@
         </div>
         <div class="linea2"></div>
         <div class="contribuidores">
-            <a href=""><i class='bx bxs-star-half'></i> <i class="p_1">Contribuidores</i></a>
+        <a href="app/contribuciones.html"><i class='bx bxs-star-half'></i> <i class="p_1">Contribuidores</i></a>
         </div>
     </div>
     <div class="linea"></div>
