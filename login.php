@@ -3,11 +3,11 @@
     session_start();
     if(isset($_POST["email"]) && isset($_POST["password"]) ){
         if(empty($_POST["email"]) || empty($_POST["password"])){
-            $_SESSION["error"] = "<span class='error' style=' position:absolute; top:0; right:0;color:red ;'> Todos los campos son necesarios</span>";
+            $_SESSION["msg"] = "<span class='msg' style=' position:absolute; top:0; right:0;color:red ;'> Todos los campos son necesarios</span>";
             header("Location: login.php");
             exit;
         }elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-            $_SESSION["error"] = "<span class='error' style=' position:absolute; top:0; right:0;color:red ;'> Email Invalido</span>";
+            $_SESSION["msg"] = "<span class='msg' style=' position:absolute; top:0; right:0;color:red ;'> Email Invalido</span>";
             header("Location: login.php");
             exit;
         } else {
@@ -29,13 +29,14 @@
                 $_SESSION["USER_VAL"] = [
                     'user_id' => $user_data['user_id'],
                     'name' => $user_data['name'],
+                    'name_parts' => explode(" ", $user_data['name']),
                     'email' => $user_data['email']
                 ];
 
                 header("Location: app/foro.php");
                 exit;
             } else {
-                $_SESSION["error"] = "<span class='error' style=' position:absolute; top:0; right:0;color:red ;'> Correo o contraseña incorrecto</span>";
+                $_SESSION["msg"] = "<span class='msg' style=' position:absolute; top:0; right:0;color:red ;'> Correo o contraseña incorrecto</span>";
                 header("Location: login.php");
                 exit;
             }
@@ -72,9 +73,9 @@
                 <p>o Inicia Sesi&oacute;n con una cuenta</p>
                 <form action="" class="form" method="POST">
                     <?php 
-                        if(isset($_SESSION["error"])){
-                            echo $_SESSION["error"];
-                            unset($_SESSION["error"]);
+                        if(isset($_SESSION["msg"])){
+                            echo $_SESSION["msg"];
+                            unset($_SESSION["msg"]);
                         }
                     ?>
                     <label for="">

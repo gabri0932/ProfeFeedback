@@ -41,7 +41,7 @@
                 <li class="principal_menu"><i class='bx bxs-cog' ></i>
                     <ul class="cositas">
                         <li><a href="account.php"><i class='bx bx-user'></i></a> <i class="p_menu1">Perfil</i></li>
-                        <li><a href=""><i class='bx bx-log-out'></i></a> <i class="p_menu">Salir</i></li>
+                        <li><a href="../resource/logout.php"><i class='bx bx-log-out'></i></a> <i class="p_menu">Salir</i></li>
                     </ul>
             </li>
             </ul>
@@ -60,7 +60,7 @@
         </div> 
         <div class="mi_perfil">
             <div class="saludo">
-                <h2>Bienvenido Gabriel</h2>
+                <h2>Bienvenido <?= $_SESSION["USER_VAL"]["name_parts"][0]; ?></h2>
             </div>
             <div class="linea"></div>
             <div class="mis_come">
