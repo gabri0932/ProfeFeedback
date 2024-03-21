@@ -1,23 +1,33 @@
 <?php
     session_start();
     include("resource/controller.php");
+    include("resource/pdo.php");
     set();
 
     if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["password"])) {
         if (empty($_POST["name"]) || empty($_POST["email"]) || empty($_POST["password"])) {
-            $_SESSION["error"] = "<span class='error' style=' position:absolute; top:0; right:0;color:red ;'>Todos los campos son necesarios.</span>";
-            header("Location: login.php");
+            $_SESSION["msg"] = "<span class='msg' style=' position:absolute; top:0; right:0;color:red ;'>Todos los campos son necesarios.</span>";
+            header("Location: login_register.php");
             exit;
         } elseif (is_numeric($_POST["name"])) {
-            $_SESSION["error"] = "<span class='error' style=' position:absolute; top:0; right:0;color:red ;'>Ingrese un nombre válido.</span>";
-            header("Location: login.php");
+            $_SESSION["msg"] = "<span class='msg' style=' position:absolute; top:0; right:0;color:red ;'>Ingrese un nombre válido.</span>";
+            header("Location: login_register.php");
             exit;
-        } elseif (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-            $_SESSION["error"] = "<span class='error' style=' position:absolute; top:0; right:0;color:red ;'>Ingrese un correo válido.</span>";
-            header("Location: login.php");
+        } elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+            $_SESSION["msg"] = "<span class='msg' style=' position:absolute; top:0; right:0;color:red ;'>Ingrese un correo válido.</span>";
+            header("Location: login_register.php");
             exit;
         } else {
-            
+            $query = $pdo -> prepare("INSERT INTO users (name, email, password) VALUES (:nm, :em, :pw);");
+            $query -> execute(array(
+                ':nm' => $_POST["name"],
+                ':em' => $_POST["email"],
+                ':pw' => $_POST["password"]
+            ));
+
+            $_SESSION["msg"] = "<span class='msg' style=' position:absolute; top:0; right:0;color:green ;'>Registro éxitoso. Inicie sesión.</span>";
+            header("Location: login.php");
+            exit;
         }
     }
 ?>
@@ -49,13 +59,13 @@
                     <i class='bx bxl-linkedin-square' ></i>
                 </div>
                 <p>Usa tu Email para registrarte</p>
-                <?php 
-                        if(isset($_SESSION["error"])){
-                            echo $_SESSION["error"];
-                            unset($_SESSION["error"]);
+                <form action="" class="form" method="POST">
+                    <?php
+                        if (isset($_SESSION["msg"])) {
+                            echo ($_SESSION["msg"]);
+                            unset($_SESSION["msg"]);
                         }
                     ?>
-                <form action="" class="form" method="POST">
                     <label for="">
                         <i class='bx bx-user' ></i>
                         <input type="text" name="name" placeholder="Nombre completo">
