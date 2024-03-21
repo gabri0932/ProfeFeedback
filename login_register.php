@@ -59,6 +59,7 @@
                     <i class='bx bxl-linkedin-square' ></i>
                 </div>
                 <p>Usa tu Email para registrarte</p>
+<<<<<<< HEAD
                 <form action="" class="form" method="POST">
                     <?php
                         if (isset($_SESSION["msg"])) {
@@ -66,6 +67,15 @@
                             unset($_SESSION["msg"]);
                         }
                     ?>
+=======
+                <?php 
+                        if(isset($_SESSION["error"])){
+                            echo $_SESSION["error"];
+                            unset($_SESSION["error"]);
+                        }
+                    ?>
+                <form action="" class="form" method="POST">
+>>>>>>> 64d5dee3ee85db08997e828f20f5da1537681e3d
                     <label for="">
                         <i class='bx bx-user' ></i>
                         <input type="text" name="name" placeholder="Nombre completo">

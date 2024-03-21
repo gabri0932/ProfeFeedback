@@ -17,7 +17,7 @@
                     <li><i class="white">¿Quieres saber mas?</i>
                         <ul>
                             <li><a href="p_privacidad.html"><i class='bx bxs-error-alt'></i> <i class="p_1">Politicas de privacidad</i></a></li>
-                            <li><a href=""><i class='bx bxl-mailchimp'></i> <i class="p_1">Nosotros</i></a></li>
+                            <li><a href="nosotros.html"><i class='bx bxl-mailchimp'></i> <i class="p_1">Nosotros</i></a></li>
                             <li><a href="../app/Normas.html"><i class='bx bx-book-open'></i> <i class="p_1">Reglas</i></a></li>
                         </ul>
                     </li>

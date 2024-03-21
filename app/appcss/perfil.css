@@ -220,8 +220,6 @@ li a{
     color: white;
     width: 400px;
     height: 300px;
-}
-.mis_come form label{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 300px;
     display: inline-block;
@@ -233,17 +231,10 @@ li a{
     border-radius: 10px;
     background-color: rgb(4,9,10);
 }
-.mis_come form label .i{
+.mis_come .i{
     position: relative;
     left: 25%;
 }
-.mis_come form label .i i{
+.mis_come  .i i{
     color: white;
-}
-.mis_come form label textarea{
-    width:295px ;
-    height:150px ;
-    background-color: transparent;
-    resize: none;
-    border: none;
 }
