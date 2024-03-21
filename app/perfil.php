@@ -64,10 +64,7 @@
             </div>
             <div class="linea"></div>
             <div class="mis_come">
-                <form action="">
-                    <label for="">
                         <p class="i"><i class='bx bx-comment'></i> Mis comentarios</p>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
                     </label>
                 </form>
             </div>
