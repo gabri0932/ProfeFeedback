@@ -28,13 +28,13 @@
         </div>
             
                     <ul class="lista">
-                        <li><a href="school/jp.php">Politecnico Francisco Jose Peynado</a></li>
-                        <li><a href="school/Loyola.php">Politecnico Loyola</a></li>
-                        <li><a href="school/Alfarero.php">Alfarero</a></li>
-                        <li><a href="school/rafael.php">San Rafael</a></li>
-                        <li><a href="school/bautista.php">Colegio Baustita</a></li>
-                        <li><a href="school/liceo.php">Liceo Americo Lugo</a></li>
-                        <li><a href="school/moscu.php">Moscu</a></li>
+                        <li><a href="school/form_escuelas.php">Politecnico Francisco Jose Peynado</a></li>
+                        <li><a href="school/form_escuelas.php">Politecnico Loyola</a></li>
+                        <li><a href="school/form_escuelas.php">Alfarero</a></li>
+                        <li><a href="school/form_escuelas.php">San Rafael</a></li>
+                        <li><a href="school/form_escuelas.php">Colegio Baustita</a></li>
+                        <li><a href="school/form_escuelas.php">Liceo Americo Lugo</a></li>
+                        <li><a href="school/form_escuelas.php">Moscu</a></li>
                     </ul>
                     <img src="../icons/icon.jpg" alt="" class="logo">
                     </div>

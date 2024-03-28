@@ -13,14 +13,14 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="../../icons/icon.jpg">
     <link rel="stylesheet" href="../appcss/form_escuelas.css">
-    <title>Politecnico Loyola</title>
+    <title>Bautista</title>
 </head>
 <body>
     <?php 
         include("../../data/header.php");
-        include("../../data/menu_escuelas.php");      
+        include("../../data/menu_escuelas.php");     
     ?>
-    <h1 class="bienvenida">Bienvenido [Name] al Politecnico Loyola</h1>
+    <h1 class="bienvenida">Bienvenido <?= $_SESSION["USER_VAL"]["name_parts"][0]; ?> a Profe Feedback</h1>
     <div class="form_comen">
         <div class="form">
             <form action="">

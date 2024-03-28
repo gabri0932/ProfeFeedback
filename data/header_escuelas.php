@@ -23,7 +23,7 @@
             <ul id="menu">
                 <li class="principal_menu"><i class='bx bxs-user-circle' ></i>
                     <ul class="cositas">
-                        <li><a href="../perfil.php"><i class='bx bx-user'></i></a> <i class="p_menu1">Perfil</i></li>
+                        <li><a href="perfil.php"><i class='bx bx-user'></i></a> <i class="p_menu1">Perfil</i></li>
                         <li><a href=""><i class='bx bx-log-out'></i></a> <i class="p_menu">Salir</i></li>
                     </ul>
             </li>

@@ -40,7 +40,7 @@
             <ul id="menu">
                 <li class="principal_menu"><i class='bx bxs-cog' ></i>
                     <ul class="cositas">
-                        <li><a href="account.php"><i class='bx bx-user'></i></a> <i class="p_menu1">Perfil</i></li>
+                        <li><a href="perfil.php"><i class='bx bx-user'></i></a> <i class="p_menu1">Perfil</i></li>
                         <li><a href="../resource/logout.php"><i class='bx bx-log-out'></i></a> <i class="p_menu">Salir</i></li>
                     </ul>
             </li>
@@ -68,6 +68,9 @@
                     </label>
                 </form>
             </div>
+        </div>
+        <div class="menu_lateral_izquierdo">
+            <a href=""><i class='bx bx-exit'></i></a>
         </div>
 </body>
 </html>
