@@ -3,8 +3,6 @@
     include("../../resource/controller.php");
     noset();
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,14 +22,14 @@
     <div class="form_comen">
         <div class="form">
             <form action="">
-            <h2>Evalua a tu profesor</h2>
-            <select name="select" class="select">
-                <option value="value1">Value 1</option>
-                <option value="value2" selected>Value 2</option>
-                <option value="value3">Value 3</option>
-            </select>
-            <textarea name="" id="" cols="30" rows="10" class="center"></textarea>
-            <button type="submit" class="center">Comentar</button>
+                <h2>Evalua a tu profesor</h2>
+                <select name="select" class="select">
+                    <option value="value1">Value 1</option>
+                    <option value="value2" selected>Value 2</option>
+                    <option value="value3">Value 3</option>
+                </select>
+                <textarea name="" id="" cols="30" rows="10" class="center"></textarea>
+                <button type="submit" class="center">Comentar</button>
             </form>
         </div>
         <div class="recientes">
