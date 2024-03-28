@@ -28,13 +28,11 @@
         </div>
             
                     <ul class="lista">
-                        <li><a href="school/form_escuelas.php">Politecnico Francisco Jose Peynado</a></li>
-                        <li><a href="school/form_escuelas.php">Politecnico Loyola</a></li>
-                        <li><a href="school/form_escuelas.php">Alfarero</a></li>
-                        <li><a href="school/form_escuelas.php">San Rafael</a></li>
-                        <li><a href="school/form_escuelas.php">Colegio Baustita</a></li>
-                        <li><a href="school/form_escuelas.php">Liceo Americo Lugo</a></li>
-                        <li><a href="school/form_escuelas.php">Moscu</a></li>
+                        <li><a href="school/comentar.php?escuela=peynado">Politecnico Francisco Jose Peynado</a></li>
+                        <li><a href="school/comentar.php?escuela=loyala">Politecnico Loyola</a></li>
+                        <li><a href="school/comentar.php?escuela=s-rafael">Colegio San Rafael</a></li>
+                        <li><a href="school/comentar.php?escuela=c-bautista">Politécnico Altagracias Lucas de Garcia</a></li>
+                        <li><a href="school/comentar.php?escuela=a-lugo">Liceo Diogenes Valdez</a></li>
                     </ul>
                     <img src="../icons/icon.jpg" alt="" class="logo">
                     </div>
