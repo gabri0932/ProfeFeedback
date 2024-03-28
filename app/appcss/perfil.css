@@ -238,3 +238,21 @@ li a{
 .mis_come  .i i{
     color: white;
 }
+.menu_lateral_izquierdo{
+    width: 10%;
+    height: 50px;
+    margin-top: 10px;
+    margin-left:2px;
+    border-top: 1px solid grey;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+.menu_lateral_izquierdo .eliminar{
+    position: relative;
+    top: 4px;
+    color: white;
+    text-decoration: none;
+}
+.menu_lateral_izquierdo a i{
+    color: white;
+}

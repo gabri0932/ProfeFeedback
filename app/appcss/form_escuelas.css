@@ -308,7 +308,6 @@ li a{
     border-radius: 10px;
 }
 .form_comen .form{
-    
     width: 30%;
     height: 90%;
     left: 5px;
@@ -321,14 +320,20 @@ li a{
     top: 3px;
     display: flex;
     justify-content: center;
+    color: black;
+    font-size: 25px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .select{
     width: 200px;
     position: relative;
-    left: 10%;
+    left: 15%;
     margin-bottom: 5px;
     background-color: transparent;
     border-radius: 10px;
+    border-radius: 20px;
+    padding: 0 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
 }
 textarea{
     resize: none;
@@ -340,57 +345,62 @@ textarea{
     background-color: transparent;
 }
 button{
-    position: relative;
-    left: 35%;
-    margin-top: 10px;
-    font-family:Arial, Helvetica, sans-serif;
-    background-color: #2b6899;
+    background-color: #9191bd;
+    color: #fff;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top:10px ;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+    display: block;
+    position: relative;
+    left: 30%;
 }
 .form_comen .recientes{
-    background-color: rgb(4,9,10);
     width: 28%;
     height: 90%;
     position: relative;
-    bottom: 90%;
+    bottom: 93%;
     left: 320px;
     border-radius: 10px;
-    border: #fff solid 1px;
+    box-shadow: 0 5px 10px rgba(235, 230, 230, 0.1);
 }
 .form_comen .populares{
-    background-color: rgb(4,9,10);
     width: 24%;
     height: 40%;
     display: flex;
     position: relative;
-    bottom: 181%;
+    bottom: 185%;
     left: 640px;
     border-radius: 10px;
-    border: #fff solid 1px;
+    box-shadow: 0 5px 10px rgba(235, 230, 230, 0.1);
 }
 .form_comen .antiguos{
-    background-color: rgb(4,9,10);
     width: 28%;
     height: 50%;
     display: flex;
     position: relative;
-    bottom: 180%;
+    bottom: 182%;
     left: 620px;
     border-radius: 10px;
-    border: #fff solid 1px;
+    box-shadow: 0 5px 10px rgba(235, 230, 230, 0.1);
 }
 .recientes h2{
     position: relative;
     left: 32px;
+    top: 5px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .populares h2{
     position: relative;
     left: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .antiguos h2{
     position: relative;
     left: 35px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 div h2{
     font-size: 20px;

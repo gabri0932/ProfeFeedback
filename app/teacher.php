@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="../icons/icon.jpg">
-    <link rel="stylesheet" href="appcss/styleeees.css">
+    <link rel="stylesheet" href="appcss/style.css">
     <link rel="stylesheet" href="../responsive/responsive.css">
     <title>Foro-Maestro</title>
 </head>

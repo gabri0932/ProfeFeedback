@@ -75,7 +75,7 @@
             </div>
         </div>
         <div class="menu_lateral_izquierdo">
-            <a href=""><i class='bx bx-exit'></i></a>
+            <a href="" class="eliminar"><i class='bx bx-exit'></i> Eliminar mi cuenta</a>
         </div>
         </div>
 </body>
