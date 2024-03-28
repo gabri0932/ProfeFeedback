@@ -1,9 +1,23 @@
 <?php
     session_start();
     include("../resource/controller.php");
+    include("../resource/pdo.php");
     noset();
-?>
 
+    $query = $pdo -> query("SELECT * FROM school;");
+    if ($query -> rowCount() == 0) {
+        $escuelas = [
+            "Politecnico Francisco Jose Peynado", "Politecnico Loyola", "Colegio San Rafael", "Politécnico Altagracias Lucas de Garcia", "Liceo Diogenes Valdez"
+        ];
+
+        for ($i = 0; $i < count($escuelas); $i++) {
+            $insert = $pdo -> prepare("INSERT INTO school (name) VALUES (:nm)");
+            $insert -> execute(array(
+                ':nm' => $escuelas[$i]
+            ));
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,11 +42,11 @@
         </div>
             
                     <ul class="lista">
-                        <li><a href="school/comentar.php?escuela=peynado">Politecnico Francisco Jose Peynado</a></li>
-                        <li><a href="school/comentar.php?escuela=loyala">Politecnico Loyola</a></li>
-                        <li><a href="school/comentar.php?escuela=s-rafael">Colegio San Rafael</a></li>
-                        <li><a href="school/comentar.php?escuela=c-bautista">Politécnico Altagracias Lucas de Garcia</a></li>
-                        <li><a href="school/comentar.php?escuela=a-lugo">Liceo Diogenes Valdez</a></li>
+                        <li><a href="school/comentar.php?escuela=1">Politecnico Francisco Jose Peynado</a></li>
+                        <li><a href="school/comentar.php?escuela=2">Politecnico Loyola</a></li>
+                        <li><a href="school/comentar.php?escuela=3">Colegio San Rafael</a></li>
+                        <li><a href="school/comentar.php?escuela=4">Politécnico Altagracias Lucas de Garcia</a></li>
+                        <li><a href="school/comentar.php?escuela=5">Liceo Diogenes Valdez</a></li>
                     </ul>
                     <img src="../icons/icon.jpg" alt="" class="logo">
                     </div>
