@@ -5,7 +5,8 @@
     noset();
 
     $query = $pdo -> query("SELECT * FROM school;");
-    if ($query -> rowCount() == 0) {
+    $query_t = $pdo -> query("SELECT * FROM teachers;");
+    if ($query -> rowCount() < 1) {
         $escuelas = [
             "Politecnico Francisco Jose Peynado", "Politecnico Loyola", "Colegio San Rafael", "Politécnico Altagracias Lucas de Garcia", "Liceo Diogenes Valdez"
         ];
@@ -15,6 +16,83 @@
             $insert -> execute(array(
                 ':nm' => $escuelas[$i]
             ));
+        }
+    } elseif ($query_t -> rowCount() < 1) {
+        $profesores = [
+            [
+                "Julio Luna",
+                "Juan Isidro Márquez",
+                "Rafael De La Cruz",
+                "Wilianyi",
+                "Mairobi Soriano",
+                "Claribel De La Rosa",
+                "Agustina Lorenzo",
+                "David Familia",
+                "Carlos Martínez",
+                "Domingo Aquino",
+                "Jose Lucia",
+                "Pablo Rosa",
+                "Luis Lara",
+                "Elsa Rivera",
+                "Evaristo Doñe",
+                "Feliciti",
+                "Felicia Aquino",
+                "Pascual Garcés",
+                "Gustina Brito",
+                "Ruberky Alcántara",
+                "Clara Brito",
+                "Yeranny Brito"
+            ], 
+            [
+                "Enrique Guevara",
+                "Karina Encarnación",
+                "Karina Glayrisa Sanchez",
+                "Santalisa Nina",
+                "Geografía e Historia Universal",
+                "Yahaira Feliz",
+                "Mabel Maria de La Cruz",
+                "Gloria Matilde Casilla",
+                "Roberto lorenzo",
+                "Fiola Sarante",
+                "Victor José mateo"
+
+            ],
+            [
+                "Domingo Garcia Brito",
+                "Nereyda Pinales",
+                "Modesto Tejeda",
+                "Pedro Martines",
+                "Sarah Lorenzo"
+            ],
+            [
+                "Néstor",
+                "Armando",
+                "Arisenia",
+                "Jose Fina",
+                "Veras",
+                "Andria"
+            ],
+            [
+                "María del Carmen",
+                "María fría",
+                "Ruth contanso",
+                "Elizabeth",
+                "Valentín",
+                "Quisquella"
+            ]
+        ];
+        /*echo ("<pre>");
+        var_dump($profesores);*/
+
+        $query = $pdo -> prepare("INSERT INTO teachers (name, school_id) VALUES (:nm, :id);");
+        for ($i = 0; $i < count($profesores); $i++) {
+            for ($j = 0; $j < count($profesores[$i]); $j++) {
+                //echo "Grupo " . $i . ": ". $profesores[$i][$j] . "<br>";
+                $query -> execute(array(
+                    ':nm' => $profesores[$i][$j],
+                    ':id' => $i + 1
+                ));
+            }
         }
     }
 ?>
