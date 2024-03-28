@@ -12,9 +12,14 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="appcss/perfil.css">
     <link rel="icon" href="../icons/icon.jpg">
+    <link rel="stylesheet" href="../responsive/responsive.css">
     <title>Perfil</title>
 </head>
 <body>
+    <?php 
+        require_once("../responsive/no_responsive.php");
+    ?>
+    <div class="container">
     <div class="padre">
         <div class="home">
             <div class="redes">
@@ -71,6 +76,7 @@
         </div>
         <div class="menu_lateral_izquierdo">
             <a href=""><i class='bx bx-exit'></i></a>
+        </div>
         </div>
 </body>
 </html>
