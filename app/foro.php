@@ -40,7 +40,6 @@
                 experiencias sobre diferentes instituciones educativas. Entre las 
                 escuelas disponibles para puntuar se encuentran:</p>
         </div>
-            
                     <ul class="lista">
                         <li><a href="school/comentar.php?escuela=1">Politecnico Francisco Jose Peynado</a></li>
                         <li><a href="school/comentar.php?escuela=2">Politecnico Loyola</a></li>
