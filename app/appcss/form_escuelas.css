@@ -308,12 +308,13 @@ li a{
     border-radius: 10px;
 }
 .form_comen .form{
-    background-color: rgb(11, 25, 27);
+    
     width: 30%;
     height: 90%;
     left: 5px;
     position: relative;
     border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(235, 230, 230, 0.1);
 }
 .form_comen .form h2{
     position: relative;
@@ -322,9 +323,9 @@ li a{
     justify-content: center;
 }
 .select{
-    width: 100px;
+    width: 200px;
     position: relative;
-    left: 32%;
+    left: 10%;
     margin-bottom: 5px;
     background-color: transparent;
     border-radius: 10px;
@@ -365,7 +366,7 @@ button{
     position: relative;
     bottom: 181%;
     left: 640px;
-    border-radius: 40px;
+    border-radius: 10px;
     border: #fff solid 1px;
 }
 .form_comen .antiguos{
@@ -376,7 +377,7 @@ button{
     position: relative;
     bottom: 180%;
     left: 620px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: #fff solid 1px;
 }
 .recientes h2{
@@ -385,7 +386,7 @@ button{
 }
 .populares h2{
     position: relative;
-    left: 15px;
+    left: 10px;
 }
 .antiguos h2{
     position: relative;
