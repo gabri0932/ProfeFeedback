@@ -23,11 +23,12 @@
         } else {
             date_default_timezone_set("America/Santo_Domingo");
             $date = getdate();
-            $query_c = $pdo -> prepare("INSERT INTO comments (comment, por, para, fecha) VALUES (:cm, :pr, :pra, :fch);");
+            $query_c = $pdo -> prepare("INSERT INTO comments (comment, por, para, `from`, fecha) VALUES (:cm, :pr, :pra, :fr, :fch);");
             $query_c -> execute(array(
                 ':cm' => htmlentities($_POST["comment"]),
                 ':pr' => $_SESSION["USER_VAL"]["user_id"],
                 ':pra' => htmlentities($_POST["teacher"]),
+                ':fr' => $_GET["escuela"],
                 ':fch' => $date["year"] . "-" . $date["mon"] . "-" . $date["mday"] . " " . $date["hours"] . ":" . $date["minutes"] . ":" . $date["seconds"]
             ));
             
@@ -74,6 +75,11 @@
         </div>
         <div class="recientes">
             <h2>Comentarios recientes</h2>
+            <div class="comentarios">
+                <?php
+                    $query = "SELECT * FROM comments WHERE"
+                ?>
+            </div>
         </div>
         <div class="populares">
             <h2>Comentarios populares</h2>
