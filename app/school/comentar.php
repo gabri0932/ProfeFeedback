@@ -45,7 +45,7 @@
     <link rel="icon" href="../../icons/icon.jpg">
     <link rel="stylesheet" href="../../responsive/responsive.css">
     <link rel="stylesheet" href="../appcss/form_escuelas.css">
-    <title>Bautista</title>
+    <title>Comentar</title>
 </head>
 <body>
     <?php 
