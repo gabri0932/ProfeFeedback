@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #0f0f0f;
+    background-color: rgb(11,20,22);
     color: #f3f3f3ef;
     font-family: Merriweather-Titulos;
     visibility: hidden;
@@ -28,6 +28,7 @@
 
 .no-responsive .titles i {
     font-size: 4em;
+    color: white;
 }
 
 .no-responsive .button a {

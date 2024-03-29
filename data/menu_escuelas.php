@@ -4,7 +4,7 @@
             <ul>
                 <li><i class='bx bxs-user-voice' id="white"></i> <i class="white"> Categorias del foro</i>
                     <ul>
-                        <li><a href="../school.php"><i class='bx bxs-school' ></i> <i class="p_1">Escuelas</i></a></li>
+                        <li><a href="../proximamente.php"><i class='bx bxs-school' ></i> <i class="p_1">Escuelas</i></a></li>
                         <li><a href="../teacher.php"><i class='bx bx-male'></i> <i class="p_1">Maestros</i> </a></li>
                     </ul>
                 </li>
@@ -16,9 +16,9 @@
                 <ul>
                     <li><i class="white">¿Quieres saber mas?</i>
                         <ul>
-                            <li><a href="../p_privacidad.html"><i class='bx bxs-error-alt'></i> <i class="p_1">Politicas de privacidad</i></a></li>
-                            <li><a href="../"><i class='bx bxl-mailchimp'></i> <i class="p_1">Nosotros</i></a></li>
-                            <li><a href="../Normas.html"><i class='bx bx-book-open'></i> <i class="p_1">Reglas</i></a></li>
+                            <li><a href="../p_privacidad.html" target="_blank"><i class='bx bxs-error-alt'></i> <i class="p_1">Politicas de privacidad</i></a></li>
+                            <li><a href="../nosotros.html" target="_blank"><i class='bx bxl-mailchimp'></i> <i class="p_1">Nosotros</i></a></li>
+                            <li><a href="../Normas.html" target="_blank"><i class='bx bx-book-open'></i> <i class="p_1">Reglas</i></a></li>
                         </ul>
                     </li>
                 </ul>
