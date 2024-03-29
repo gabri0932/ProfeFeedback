@@ -334,6 +334,7 @@ li a{
     border-radius: 20px;
     padding: 0 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+    color: white;
 }
 textarea{
     resize: none;
@@ -343,8 +344,10 @@ textarea{
     height: 230px;
     border-radius: 10px;
     background-color: transparent;
+    color:white;
 }
 button{
+    width: 400px;
     background-color: #9191bd;
     color: #fff;
     border: none;
