@@ -95,6 +95,8 @@
             }
         }
     }
+
+    $query_s = $pdo -> query("SELECT * FROM school;");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -119,11 +121,11 @@
                 escuelas disponibles para puntuar se encuentran:</p>
         </div>
                     <ul class="lista">
-                        <li><a href="school/comentar.php?escuela=1">Politecnico Francisco Jose Peynado</a></li>
-                        <li><a href="school/comentar.php?escuela=2">Politecnico Loyola</a></li>
-                        <li><a href="school/comentar.php?escuela=3">Colegio San Rafael</a></li>
-                        <li><a href="school/comentar.php?escuela=4">Politécnico Altagracias Lucas de Garcia</a></li>
-                        <li><a href="school/comentar.php?escuela=5">Liceo Diogenes Valdez</a></li>
+                        <?php
+                            while ($school = $query_s -> fetch(PDO::FETCH_ASSOC)) { ?>
+                                <li><a href="school/comentar.php?escuela=<?= $school["school_id"] ?>"><?= $school["name"] ?></a></li>
+                            <?php }
+                        ?>
                     </ul>
                     <img src="../icons/icon.jpg" alt="" class="logo">
                     </div>
