@@ -349,7 +349,7 @@ li a{
     top: 90px;
     left: 320px;
     width: 900px;
-    height: 470px;
+    height: 80vh;
     border: 1px solid grey;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(235, 230, 230, 0.1);
