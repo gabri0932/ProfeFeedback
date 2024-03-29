@@ -288,124 +288,76 @@ li a{
     left: 2.5%;
     top: 110px;
 }
-.bienvenida{
-    color: white;
+.informacion{
     display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
-    width: 800px;
     left: 400px;
-    bottom: 75%;
+    bottom: 350px;
+    width: 800px;
+    height: auto;
 }
-.form_comen{
+.bienvenido{
+    display: flex;
+    width: 500px;
     color: white;
-    width: 70vw;
-    left: 24%;
-    bottom: 7%;
-    height: 65vh;
+    height: 150px;
+    font-family: Verdana, Geneva, Tahoma, sans-serifs;
+}
+.informacion .bienvenido p{
+    width: 450px;
+    height: 140px;
+    display: flexbox;
+    position: relative;
+    top: 10px;
+    left: 15px;
+}
+.bienvenido{
+    background-color: rgb(35, 68, 75);
+    border-radius: 10px;
+    color: white;
+}
+.lista{
+    width: 300px;
+    display: flex;
     position: absolute;
-    border-radius: 10px;
+    flex-direction: column;
+    list-style: none;
+    top: 180px;
 }
-.form_comen .form{
-    width: 30%;
-    height: 92%;
-    left: 5px;
-    position: relative;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(235, 230, 230, 0.1);
+.lista a{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serifs;
 }
-.form_comen .form h2{
-    position: relative;
-    top: 3px;
+.logo{
     display: flex;
-    justify-content: center;
-    color: black;
-    font-size: 25px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    width: 300px;
+    border-radius: 100px;
+    top: 20px;
+    left:520px;
+    height: 300px;
 }
-.select{
-    width: 200px;
+.linea5{
+    border-bottom: 1px solid grey;
+    width: 70%;
+    left: 25%;
     position: relative;
-    left: 15%;
-    margin-bottom: 5px;
-    background-color: transparent;
-    border-radius: 10px;
-    border-radius: 20px;
-    padding: 0 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
-    color: black;
 }
-textarea{
-    resize: none;
-    position: relative;
-    margin-top: 2px;
-    left: 8%;
-    height: 230px;
-    border-radius: 10px;
-    background-color: transparent;
-    color:white;
-}
-button{
-    width: 100px;
-    top: -10px;
-    background-color: #9191bd;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 15px;
-    cursor: pointer;
-    margin-top:10px ;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
-    display: block;
-    position: relative;
-    left: 30%;
-}
-.form_comen .recientes{
-    width: 28%;
-    height: 90%;
-    position: relative;
-    bottom: 93%;
+.todas{
+    position: absolute;
+    display: flex;
+    top: 90px;
     left: 320px;
+    width: 900px;
+    height: 470px;
+    border: 1px solid grey;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(235, 230, 230, 0.1);
 }
-.form_comen .populares{
-    width: 24%;
-    height: 40%;
+.todas h2{
     display: flex;
+    text-align: center;
     position: relative;
-    bottom: 185%;
-    left: 640px;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(235, 230, 230, 0.1);
-}
-.form_comen .antiguos{
-    width: 28%;
-    height: 50%;
-    display: flex;
-    position: relative;
-    bottom: 182%;
-    left: 620px;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(235, 230, 230, 0.1);
-}
-.recientes h2{
-    position: relative;
-    left: 32px;
-    top: 5px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.populares h2{
-    position: relative;
-    left: 10px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.antiguos h2{
-    position: relative;
-    left: 35px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-div h2{
-    font-size: 20px;
+    left: 35%;
+    font-family: Verdana, Geneva, Tahoma, sans-serifs;
 }
