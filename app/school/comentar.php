@@ -20,7 +20,7 @@
     ?>
     <div class="container">
     <?php 
-        include("../../data/header.php");
+        include("../../data/header_comentarios.php");
         include("../../data/menu_escuelas.php");     
     ?>
     <h1 class="bienvenida">Bienvenido <?= $_SESSION["USER_VAL"]["name_parts"][0]; ?> a Profe Feedback</h1>
