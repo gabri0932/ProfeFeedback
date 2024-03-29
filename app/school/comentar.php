@@ -13,6 +13,28 @@
         header("Location: https://profefeedback.com/app/foro.php");
         exit;
     }
+
+    if (isset($_POST["teacher"]) && isset($_POST["comment"])) {
+        if (empty($_POST["teacher"]) || empty($_POST["comment"])) {
+            header("Location: comentar.php");
+            exit;
+        } elseif (strlen($_POST["comment"]) > 512) {
+            //Aqui va un error mmpene.
+        } else {
+            date_default_timezone_set("America/Santo_Domingo");
+            $date = getdate();
+            $query_c = $pdo -> prepare("INSERT INTO comments (comment, por, para, fecha) VALUES (:cm, :pr, :pra, :fch);");
+            $query_c -> execute(array(
+                ':cm' => htmlentities($_POST["comment"]),
+                ':pr' => $_SESSION["USER_VAL"]["user_id"],
+                ':pra' => htmlentities($_POST["teacher"]),
+                ':fch' => $date["year"] . "-" . $date["mon"] . "-" . $date["mday"] . " " . $date["hours"] . ":" . $date["minutes"] . ":" . $date["seconds"]
+            ));
+            
+            header("Location: ../foro.php");
+            exit;
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,16 +59,16 @@
     <h1 class="bienvenida">Bienvenido <?= $_SESSION["USER_VAL"]["name_parts"][0]; ?> a Profe Feedback</h1>
     <div class="form_comen">
         <div class="form">
-            <form action="">
+            <form action="" method="POST">
                 <h2>Evalua a tu profesor</h2>
-                <select name="select" class="select">
+                <select name="teacher" class="select">
                     <?php
                         while ($profesor = $query_p -> fetch(PDO::FETCH_ASSOC)) { ?>
                             <option value="<?= $profesor["id_teacher"]; ?>"><?= $profesor["name"]; ?></option>
                         <?php }
                     ?>
                 </select>
-                <textarea name="" id="" cols="30" rows="10" class="center"></textarea>
+                <textarea name="comment" id="" cols="30" rows="10" class="center"></textarea>
                 <button type="submit" class="center">Comentar</button>
             </form>
         </div>
