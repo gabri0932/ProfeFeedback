@@ -1,7 +1,18 @@
 <?php
     session_start();
     include("../../resource/controller.php");
+    include("../../resource/pdo.php");
     noset();
+
+    if (isset($_GET["escuela"]) && !empty($_GET["escuela"])) {
+        $query_p = $pdo -> prepare("SELECT * FROM teachers WHERE school_id = :id");
+        $query_p -> execute(array(
+            ':id' => htmlentities($_GET["escuela"])
+        ));
+    } else {
+        header("Location: https://profefeedback.com/app/foro.php");
+        exit;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,9 +40,11 @@
             <form action="">
                 <h2>Evalua a tu profesor</h2>
                 <select name="select" class="select">
-                    <option value="value1">Value 1</option>
-                    <option value="value2" selected>Value 2</option>
-                    <option value="value3">Value 3</option>
+                    <?php
+                        while ($profesor = $query_p -> fetch(PDO::FETCH_ASSOC)) { ?>
+                            <option value="<?= $profesor["id_teacher"]; ?>"><?= $profesor["name"]; ?></option>
+                        <?php }
+                    ?>
                 </select>
                 <textarea name="" id="" cols="30" rows="10" class="center"></textarea>
                 <button type="submit" class="center">Comentar</button>
