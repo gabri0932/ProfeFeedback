@@ -138,7 +138,7 @@
                     $arr_out = [];
                     for ($i = 0; $i < count($arr_in); $i++) {
                         $data = explode("-", $arr_in[$i]);
-                        $query = $pdo -> prepare("SELECT name FROM teachers WHERE id_teacher = :id; LIMIT 4");
+                        $query = $pdo -> prepare("SELECT name FROM teachers WHERE id_teacher = :id;");
                         $query -> execute(array(
                             ':id' => $data[0]
                         ));
