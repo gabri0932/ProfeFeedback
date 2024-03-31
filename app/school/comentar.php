@@ -32,7 +32,7 @@
                 ':fch' => $date["year"] . "-" . $date["mon"] . "-" . $date["mday"] . " " . $date["hours"] . ":" . $date["minutes"] . ":" . $date["seconds"]
             ));
             
-            header("Location: ../foro.php");
+            header("Location: " . $_SERVER['REQUEST_URI'] . " ");
             exit;
         }
     }
@@ -77,12 +77,82 @@
             <h2>Comentarios recientes</h2>
             <div class="comentarios">
                 <?php
-                    $query = "SELECT * FROM comments WHERE"
+                    $query = $pdo -> prepare("SELECT * FROM comments WHERE `from` = :id");
+                    $query -> execute(array(
+                        ':id' => $_GET["escuela"]
+                    ));
+
+                    while ($comentario = $query -> fetch(PDO::FETCH_ASSOC)) { ?>
+                        <div class="comentario">
+                            <?php
+                                //Datos necesarios para darle forma al comentarios.
+                                $query_teacher = $pdo -> prepare("SELECT name FROM teachers WHERE id_teacher = :id");
+                                $query_teacher -> execute(array(
+                                    ':id' => $comentario["para"]
+                                ));
+                                $para = $query_teacher -> fetch(PDO::FETCH_ASSOC);
+                            ?>
+                            <div class="info">
+                                <span class="comment">Alguien comentó sobre <?= $para["name"]; ?>.</span>
+                                <span class="date"><?= $comentario["fecha"]; ?></span>
+                            </div>
+                            <div class="text">
+                                <span><?= $comentario["comment"] ?></span>
+                            </div>
+                        </div>
+                    <?php }
                 ?>
             </div>
         </div>
         <div class="populares">
-            <h2>Comentarios populares</h2>
+            <h2>Profesores populares</h2>
+            <div class="profesores-list">
+                <?php
+                    $query = $pdo -> prepare("SELECT id_teacher FROM teachers WHERE school_id = :id;");
+                    $query -> execute(array(
+                        ':id' => $_GET["escuela"]
+                    ));
+                    
+                    $arr = [];
+                    while ($c_prof = $query -> fetch(PDO::FETCH_ASSOC)) {
+                        array_push($arr, $c_prof["id_teacher"]);
+                    }
+
+                    $arr_in = [];
+                    for ($i = 0; $i < count($arr); $i++) {
+                        $query = $pdo -> prepare("SELECT COUNT(*) para FROM comments WHERE para = :id;");
+                        $query -> execute(array(
+                            ':id' => $arr[$i]
+                        ));
+
+                        $p_comments = $query -> fetch(PDO::FETCH_ASSOC);
+                        if ($p_comments["para"] >= 1) {
+                            array_push($arr_in, $arr[$i] . "-" . $p_comments["para"]);
+                        }
+                    }
+                    /* TODO: Ponerle un limite a los resultados y corregir el error al mostrar los comentarios.
+                     * echo "<pre>";
+                     * print_r($arr_in);
+                     */
+
+                    $arr_out = [];
+                    for ($i = 0; $i < count($arr_in); $i++) {
+                        $data = explode("-", $arr_in[$i]);
+                        $query = $pdo -> prepare("SELECT name FROM teachers WHERE id_teacher = :id; LIMIT 4");
+                        $query -> execute(array(
+                            ':id' => $data[0]
+                        ));
+                        $nombre = $query -> fetch(PDO::FETCH_ASSOC);
+
+                        array_push($arr_out, $nombre["name"]);
+                    }
+                    //print_r($arr_out);
+
+                    for ($i = 0; $i < count($arr_out); $i++) { ?>
+                        <span class="profesor"><?= $arr_out[$i] . ": " . $arr_in[$i][2] . " Comentarios.<br>"?></span>
+                    <?php }
+                ?>
+            </div>
         </div>
         <div class="antiguos">
             <h2>Comentarios antiguos</h2>
