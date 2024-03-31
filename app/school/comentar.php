@@ -73,8 +73,10 @@
                 <button type="submit" class="center">Comentar</button>
             </form>
         </div>
+        <div class="title_recientes">
+        <h2>Comentarios recientes</h2>
+        </div>
         <div class="recientes">
-            <h2>Comentarios recientes</h2>
             <div class="comentarios">
                 <?php
                     $query = $pdo -> prepare("SELECT * FROM comments WHERE `from` = :id");
@@ -92,20 +94,25 @@
                                 ));
                                 $para = $query_teacher -> fetch(PDO::FETCH_ASSOC);
                             ?>
+                            <div class="espacio">
                             <div class="info">
                                 <span class="comment">Alguien comentó sobre <?= $para["name"]; ?>.</span>
                                 <span class="date"><?= $comentario["fecha"]; ?></span>
+                                <p>Dijo: <span><?= $comentario["comment"] ?></span></p>
                             </div>
-                            <div class="text">
-                                <span><?= $comentario["comment"] ?></span>
+                            <div class="espacios">
+                                <br>
                             </div>
+                        </div>
                         </div>
                     <?php }
                 ?>
             </div>
         </div>
-        <div class="populares">
+        <div class="title_populares">
             <h2>Profesores populares</h2>
+        </div>
+        <div class="populares">
             <div class="profesores-list">
                 <?php
                     $query = $pdo -> prepare("SELECT id_teacher FROM teachers WHERE school_id = :id;");
@@ -153,9 +160,6 @@
                     <?php }
                 ?>
             </div>
-        </div>
-        <div class="antiguos">
-            <h2>Comentarios antiguos</h2>
         </div>
     </div>
     </div>
