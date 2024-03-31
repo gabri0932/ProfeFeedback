@@ -374,6 +374,7 @@ button{
     width: 24%;
     height: 40%;
     display: flex;
+    flex-direction: column;
     position: relative;
     bottom: 185%;
     left: 640px;
