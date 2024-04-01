@@ -115,7 +115,7 @@
         <div class="populares">
             <div class="profesores-list">
                 <?php
-                    $query = $pdo -> prepare("SELECT id_teacher FROM teachers WHERE school_id = :id;");
+                    $query = $pdo -> prepare("SELECT id_teacher FROM teachers WHERE school_id = :id ORDER BY RAND();");
                     $query -> execute(array(
                         ':id' => $_GET["escuela"]
                     ));
@@ -137,10 +137,6 @@
                             array_push($arr_in, $arr[$i] . "-" . $p_comments["para"]);
                         }
                     }
-                    /* TODO: Ponerle un limite a los resultados y corregir el error al mostrar los comentarios.
-                     * echo "<pre>";
-                     * print_r($arr_in);
-                     */
 
                     $arr_out = [];
                     for ($i = 0; $i < count($arr_in); $i++) {
@@ -153,15 +149,16 @@
 
                         array_push($arr_out, $nombre["name"]);
                     }
-                    //print_r($arr_out);
 
-                    for ($i = 0; $i < count($arr_out); $i++) { ?>
-                        <span class="profesor"><?= $arr_out[$i] . ": " . $arr_in[$i][2] . " Comentarios.<br>"?></span>
-                    <?php }
+                    if (!empty($arr_out) && count($arr_out) > 5) {
+                        for ($i = 1; $i < 6; $i++) { ?>
+                            <span class="profesor"><?=$i . ". " .  $arr_out[$i] ?></span>
+                        <?php }
+                    }
                 ?>
             </div>
         </div>
     </div>
     </div>
 </body>
-</html>
+</html> 
