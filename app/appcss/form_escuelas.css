@@ -392,6 +392,7 @@ button{
     border-radius: 10px;
     margin-top: 4px ;
     margin-left: 3px;
+    padding: 10px;
 }
 .title_populares{
     display: flex;
@@ -410,7 +411,15 @@ button{
     left: 690px;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(235, 230, 230, 0.1);
+    padding: 10px;
 }
+
+.form_comen .populares .profesores-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
 .form_comen .antiguos{
     width: 28%;
     height: 50%;
