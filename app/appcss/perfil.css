@@ -218,7 +218,7 @@ li a{
 }
 .mis_come{
     color: white;
-    width: 400px;
+    width: 500px;
     height: 300px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 300px;
@@ -230,12 +230,18 @@ li a{
     color: white;
     border-radius: 10px;
     background-color: rgb(4,9,10);
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
-.mis_come .i{
+.i{
     position: relative;
-    left: 25%;
+    left: 10%;
+    width: 300px;
 }
-.mis_come  .i i{
+.i i{
+    color: white;
+}
+p{
     color: white;
 }
 .menu_lateral_izquierdo{
@@ -255,4 +261,31 @@ li a{
 }
 .menu_lateral_izquierdo a i{
     color: white;
+}
+.comentario{
+    position: relative;
+    top: 10px;
+    padding: 2px;
+    border: 1px solid grey;
+    width: 90%;
+    position: relative;
+    left: 5%;
+    border-radius: 10px;
+}
+::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color del botón de desplazamiento */
+    border-radius: 4px; /* Redondez del botón de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color del botón de desplazamiento al pasar el cursor */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f2f2f2; /* Color del área de seguimiento */
+    border-radius: 4px; /* Redondez del área de seguimiento */
 }

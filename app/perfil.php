@@ -1,6 +1,7 @@
 <?php
     session_start();
     include("../resource/controller.php");
+    include("../resource/pdo.php");
     noset();
 ?>
 
@@ -68,10 +69,35 @@
                 <h2>Bienvenido <?= $_SESSION["USER_VAL"]["name_parts"][0]; ?></h2>
             </div>
             <div class="linea"></div>
+            <p class="i"><i class='bx bx-comment'></i> Mis comentarios</p>
             <div class="mis_come">
-                        <p class="i"><i class='bx bx-comment'></i> Mis comentarios</p>
-                    </label>
-                </form>
+                <div class="comentarios">
+                    <?php
+                        $query = $pdo -> prepare("SELECT * FROM comments WHERE por = :id;");
+                        $query -> execute(array(
+                            ':id' => $_SESSION["USER_VAL"]["user_id"]
+                        ));
+
+                        while ($mcomment = $query -> fetch(PDO::FETCH_ASSOC)) { 
+                            if (!empty($mcomment)) {
+                                $query_t = $pdo -> prepare("SELECT name FROM teachers WHERE id_teacher = :id;");
+                                $query_t -> execute(array(
+                                    ':id' => $mcomment['para']
+                                ));
+                                $teac = $query_t -> fetch(PDO::FETCH_ASSOC); ?>
+
+                                <div class="comentario">
+                                    <span class="info">Comentaste sobre <?= $teac["name"] . " en el " . $mcomment["fecha"] ?></span>
+                                    <div class="co">
+                                        <span class="text">Dijiste: <?= $mcomment["comment"] ?></span>
+                                    </div>
+                                    
+                                </div>
+                                <div class="espacio"><br></div>
+                            <?php }
+                        }
+                    ?>
+                </div>
             </div>
         </div>
         <div class="menu_lateral_izquierdo">

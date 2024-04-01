@@ -362,11 +362,15 @@ button{
     left: 30%;
 }
 .title_recientes{
+    color: white;
     display: flex;
     position: absolute;
     top: -24px;
     left: 390px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.form h2{
+    color: white;
 }
 .form_comen .recientes{
     width: 35%;
@@ -378,6 +382,9 @@ button{
     left: 320px;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(235, 230, 230, 0.1);
+}
+h2{
+    
 }
 .recientes .comentarios .espacio{
     margin-top: 1px ;
