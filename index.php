@@ -75,14 +75,18 @@
     <div class="comentarios">
             <div class="recientes">
                 <h3>Comentarios recientes</h3>
+            <div class="p"><a href="login_register.php"><p>Registrate para ver el contenido</p></a></div>
             </div>
             <div class="destacados">
-                <h3>Comentarios destacados</h3>   
+                <h3>Comentarios destacados</h3>
+            <div class="p"><a href="login_register.php"><p>Registrate para ver el contenido</p></a></div>
             </div>
         </form>
     </div>
     <div class="popular">
         <h3>Comentarios populares</h3>
+            <div class="p"><a href="login_register.php"><p>Registrate para ver el contenido</p></a></div>
+                    
     </div>
     </div>
     </body>
