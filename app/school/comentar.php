@@ -19,7 +19,7 @@
             header("Location: comentar.php");
             exit;
         } elseif (strlen($_POST["comment"]) > 512) {
-            //Aqui va un error mmpene.
+            //aqui va un error
         } else {
             date_default_timezone_set("America/Santo_Domingo");
             $date = getdate();

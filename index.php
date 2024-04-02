@@ -59,7 +59,7 @@
     <div class="mover">
     <div class="info">
         <di class="h2">
-            <h2>Saber de tus profesores nunca habia sido tan fácil</h2>
+            <h2>Sabe de tus profesores nunca habia sido tan fácil</h2>
         </di>
         <div class="p">
             <p>"La ventaja de utilizar herramientas como Profe Feedback es que te evita el
