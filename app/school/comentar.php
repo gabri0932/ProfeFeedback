@@ -61,7 +61,7 @@
     <div class="form_comen">
         <div class="form">
             <form action="" method="POST">
-                <h2>Evalua a tu profesor</h2>
+                <h2 >Evalua a tu profesor</h2>
                 <select name="teacher" class="select">
                     <?php
                         while ($profesor = $query_p -> fetch(PDO::FETCH_ASSOC)) { ?>
@@ -98,6 +98,7 @@
                             <div class="info">
                                 <span class="comment">Alguien comentó sobre <?= $para["name"]; ?>.</span>
                                 <span class="date"><?= $comentario["fecha"]; ?></span>
+                                <div class="linea"></div>
                                 <p>Dijo: <span><?= $comentario["comment"] ?></span></p>
                             </div>
                             <div class="espacios">

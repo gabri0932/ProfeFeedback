@@ -421,5 +421,6 @@ li a{
     position: relative;
     top: 25%;
 }
-.p p{
+a{
+    text-decoration: none;
 }

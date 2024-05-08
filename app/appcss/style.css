@@ -317,7 +317,7 @@ li a{
     color: white;
 }
 .lista{
-    width: 300px;
+    width: 400px;
     display: flex;
     position: absolute;
     flex-direction: column;
@@ -342,4 +342,7 @@ li a{
     width: 70%;
     left: 25%;
     position: relative;
+}
+.lista li a{
+    text-decoration: none;
 }

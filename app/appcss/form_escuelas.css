@@ -7,7 +7,9 @@ body{
     height: 10vh;
     width: 100vw;
     display: flex;
-
+}
+h2{
+    color: white;
 }
 .padre .home .redes a i{
     color: white;
@@ -320,7 +322,7 @@ li a{
     top: 3px;
     display: flex;
     justify-content: center;
-    color: black;
+    color: white;
     font-size: 25px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -334,6 +336,9 @@ li a{
     border-radius: 20px;
     padding: 0 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+    color: white;
+}
+.select option{
     color: black;
 }
 textarea{
@@ -443,10 +448,17 @@ h2{
     top: 5px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.recientes .linea{
+    border-bottom: 1px solid grey;
+    padding-top: 3px;
+}
 .populares h2{
     position: relative;
     left: 10px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.populares .profesores-list{
+    padding-top: 20px;
 }
 .antiguos h2{
     position: relative;
