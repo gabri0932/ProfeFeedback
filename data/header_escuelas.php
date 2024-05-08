@@ -2,9 +2,9 @@
     <div class="padre">
         <div class="home">
             <div class="redes">
-                <a href=""><i class='bx bxl-facebook-circle'></i></a>
-                <a href=""><i class='bx bxl-instagram' ></i></a>
-                <a href=""><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.instagram.com/profe_feedback_6toc/"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://www.facebook.com/groups/461443679786934"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.threads.net/@profe_feedback_6toc"><i class='bx bxl-twitter' ></i></a>
             </div>
             <div class="title">
                 <h1>Profe Feedback</h1>
