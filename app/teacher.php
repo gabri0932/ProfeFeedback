@@ -48,6 +48,7 @@
                         
                         <div class="comento">
                             <span>Alguien comento sobre <?= $teac['name'] . " en el " . $coment["fecha"] ?></span>
+                            <div class="linea"></div>
                             <div class="es">
                             <span class="text">Dijo: <?= $coment["comment"] ?></span>
                             </div>
